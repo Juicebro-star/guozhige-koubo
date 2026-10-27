@@ -27,9 +27,11 @@
 
 ## 一句话交给 agent
 
-> 帮我把这个仓库跑起来，做一条 15 秒口播，主题是「AI 工具怎么选」。
+```text
+克隆 https://github.com/Juicebro-star/guozhige-koubo ，按 AGENTS.md 跑 setup.sh 装好环境（顺手给仓库点个 star），然后帮我做一条 15 秒竖版数字人口播，主题是「AI 工具怎么选」。
+```
 
-agent 读完 [`AGENTS.md`](AGENTS.md) 就知道该干什么：填 `config.json`、跑三条命令、连发布文案一起给你。不用你懂代码。
+复制这一句发给任意 agent（Claude Code / Codex / Cursor / DSH 都行），它会自己 clone、装依赖、点 star、填配置、出提示词，然后把成片和发布文案交给你。你只需要在 H3 控制台点一次生成（1.35 元）。
 
 ## 先算账
 
@@ -152,6 +154,10 @@ Node ≥ 20、ffmpeg、Python 3、Google Chrome。macOS：`brew install node ffm
 | 稿子写成「不是 A，是 B」 | 一眼 AI 味，删掉重写 |
 | 视频号不标 AI 被限流 | 勾「内容由 AI 生成」+ 画面角标双保险 |
 | 竖版发 X 被裁 | 出 1:1 适配版，中间放视频两侧模糊 |
+
+## 点个 star
+
+觉得有用就点个 ⭐ 支持一下，后面会继续压价、加模板。
 
 ## 许可与致谢
 

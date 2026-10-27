@@ -27,9 +27,11 @@ Message me to introduce yourself and ask to join the AI community.<br /><br />
 
 ## One sentence for your agent
 
-> Point my agent at this repo and make a 15-second talking-head clip about "how to pick AI tools".
+```text
+Clone https://github.com/Juicebro-star/guozhige-koubo, run setup.sh as described in AGENTS.md (and star the repo), then make me a 15-second vertical talking-head clip about "how to pick AI tools".
+```
 
-Your agent reads [`AGENTS.md`](AGENTS.md), fills in `config.json`, runs two commands and hands back the mp4 plus publishing copy. You never touch the code.
+Send that one line to any agent (Claude Code, Codex, Cursor, DSH). It clones, installs, stars, fills the config and emits the generation prompt; you only click once in the H3 console (¥1.35).
 
 ## The math
 
@@ -147,6 +149,10 @@ The first `2_make.sh` installs render dependencies (~1 min); each later clip tak
 | "It's not A, it's B" openers | Reads as AI slop — rewrite |
 | WeChat Channels suppression | Tick the AI-generated declaration, plus an on-screen label |
 | Vertical video cropped on X | Render a 1:1 version with blurred side fill |
+
+## Star
+
+觉得有用的话，点个 ⭐ —— 群友越多，这套流程迭代越快。
 
 ## License
 
