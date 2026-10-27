@@ -14,7 +14,6 @@
 ![remotion](https://img.shields.io/badge/剪辑-Remotion%204-0b84f3)
 ![license](https://img.shields.io/badge/license-MIT-black)
 
-<img src="docs/preview/f_2.jpg" width="250" alt="群名胶囊 + 大字"> <img src="docs/preview/f_8.jpg" width="250" alt="三条干货清单"> <img src="docs/preview/f_12.5.jpg" width="250" alt="二维码卡片">
 
 </div>
 
@@ -106,8 +105,10 @@ skills/guozhige-koubo/
 │   ├── variants/         现成风格配置
 │   └── assets/           二维码（黑版）+ 音效
 ├── templates/huazi-916/  9:16 渲染工程（Remotion）
-├── references/           花字组件、包装、安装、换人物
-└── assets/               avatar_ref.jpg
+└── references/           花字组件、包装、安装、换人物
+```
+
+> 仓库里**不含示例人物图和成片**：把你的参考图放进 `assets/`，改 `config.json` 的 `avatar` 即可。
 ```
 
 ## 环境

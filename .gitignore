@@ -13,3 +13,7 @@ bin/
 skills/guozhige-koubo/pipeline/work/
 skills/guozhige-koubo/pipeline/out/
 skills/guozhige-koubo/pipeline/_a.wav
+
+# 个人参考图不进仓库
+skills/guozhige-koubo/assets/*.jpg
+skills/guozhige-koubo/assets/*.png

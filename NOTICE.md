@@ -1,7 +1,7 @@
 # Notice / 说明
 
 The MIT license (LICENSE) covers the code and documentation in this repository.
-The demo videos and presenter image (skills/guozhige-koubo/assets/avatar_ref.jpg) depict the author's own AI digital human and are provided for
+The presenter image is not included in this repository — you supply your own face (yours or one you are licensed to use) and are provided for
 demonstration only — do not re-upload them as your own or use the presenters' likeness
 in your own content. See THIRD_PARTY.md for bundled third-party assets.
 

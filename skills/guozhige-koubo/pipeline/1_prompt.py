@@ -13,6 +13,9 @@ prompt = f"""参考图中的年轻女性正对手机前置镜头说话，自拍�
 
 声音：只有她的人声和安静室内底噪；无音乐、无字幕、无任何画面文字、无水印。"""
 
+_av = os.path.join(os.path.dirname(os.path.abspath(cfgp)), cfg["avatar"])
+if not os.path.exists(_av):
+    sys.exit(f"参考图不存在：{cfg['avatar']}\n把一张 9:16 竖图放进 assets/，再改 config.json 的 avatar")
 print("=" * 60)
 print("① 上传参考图：", cfg["avatar"])
 print(f"② 比例 {g['ratio']} ｜ 分辨率 {g['resolution']} ｜ 时长 {g['duration']} 秒 ｜ 模型 {g['model']}")
