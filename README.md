@@ -14,6 +14,10 @@
 ![remotion](https://img.shields.io/badge/剪辑-Remotion%204-0b84f3)
 ![license](https://img.shields.io/badge/license-MIT-black)
 
+<img src="docs/preview/f_2.jpg" width="250" alt="群名胶囊 + 大字"> <img src="docs/preview/f_8.jpg" width="250" alt="三条干货清单"> <img src="docs/preview/f_12.5.jpg" width="250" alt="二维码卡片">
+
+**[▶ 看成片（15 秒，2.2MB）](docs/demo.mp4)**
+
 
 </div>
 
@@ -93,22 +97,24 @@ CONFIG=variants/B.json bash 2_make.sh ~/h3.mp4   # 清单干货风
 ## 目录
 
 ```
+docs/                      示例：15 秒成片 + 三张关键帧
 skills/guozhige-koubo/
-├── SKILL.md              Agent 操作手册（Claude Code / Codex 可直接用）
-├── persona.json          人物设定
-├── pipeline/             ★ 流水线，改 config.json 就够了
-│   ├── config.json       稿子 / 人物 / 花字 / 二维码位置
-│   ├── 1_prompt.py       H3 提示词生成
-│   ├── 2_make.sh         一键出片
-│   ├── align_lite.py     免 whisper 的逐字对齐
-│   ├── gen_edit.py       config → edit.json
-│   ├── variants/         现成风格配置
-│   └── assets/           二维码（黑版）+ 音效
-├── templates/huazi-916/  9:16 渲染工程（Remotion）
-└── references/           花字组件、包装、安装、换人物
+├── SKILL.md               Agent 操作手册（Claude Code / Codex 可直接用）
+├── persona.json           人物设定
+├── pipeline/              ★ 流水线，改 config.json 就够了
+│   ├── config.json        稿子 / 人物 / 花字 / 二维码位置
+│   ├── 1_prompt.py        H3 提示词生成
+│   ├── 2_make.sh          一键出片
+│   ├── align_lite.py      免 whisper 的逐字对齐
+│   ├── gen_edit.py        config → edit.json
+│   ├── variants/          现成风格配置
+│   └── assets/            二维码（黑版）+ 音效
+├── templates/huazi-916/   9:16 渲染工程（Remotion）
+├── references/            花字组件、包装、安装、换人物
+└── assets/                avatar_ref.jpg（示例参考图）
 ```
 
-> 仓库里**不含示例人物图和成片**：把你的参考图放进 `assets/`，改 `config.json` 的 `avatar` 即可。
+> 示例成片在 `docs/demo.mp4`，示例参考图在 `assets/avatar_ref.jpg`。换成你自己的人，改 `config.json` 的 `avatar` + `look` 两行。
 
 ## 环境
 
