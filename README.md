@@ -109,7 +109,6 @@ skills/guozhige-koubo/
 ```
 
 > 仓库里**不含示例人物图和成片**：把你的参考图放进 `assets/`，改 `config.json` 的 `avatar` 即可。
-```
 
 ## 环境
 
