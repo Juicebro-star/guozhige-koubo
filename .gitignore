@@ -1,0 +1,15 @@
+node_modules/
+out/
+release/
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+public/main*.mp4
+public/voice*.wav
+bin/
+
+# 流水线运行时产物
+skills/guozhige-koubo/pipeline/work/
+skills/guozhige-koubo/pipeline/out/
+skills/guozhige-koubo/pipeline/_a.wav

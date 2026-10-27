@@ -1,0 +1,52 @@
+{
+ "name": "A-克制真人风",
+ "avatar": "../assets/avatar_ref.jpg",
+ "look": "年轻东亚女性，黑色长发带脸侧碎发，白色罗纹背心，室内自然光",
+ "act": "像一位亲切的中文科技博主，一边讲一边自然做手势，表情自信有感染力，偶尔点头",
+ "script": "群里天天都在聊：AI 到底怎么用，怎样用 AI 变现。果汁哥 AI 交流群，真实案例，工具选型、Agent 搭建、接单变现，每天都有。想围观的，扫码进来。",
+ "gen": {
+  "model": "MiniMax-H3",
+  "resolution": "768P",
+  "ratio": "9:16",
+  "duration": 15
+ },
+ "qr": "assets/qr.png",
+ "qr_pos": {
+  "x": 240,
+  "y": 860,
+  "w": 600
+ },
+ "title": {
+  "left": "果汁哥",
+  "right": "AI & Agent 交流群"
+ },
+ "preset": "克制",
+ "tail": 0.55,
+ "stack": [],
+ "pill": {
+  "at": "每天都有",
+  "text": "扫码进群",
+  "sub": "一起聊 AI & Agent",
+  "y": 770
+ },
+ "keys": [
+  "AI 到底怎么用",
+  "真实案例",
+  "接单变现",
+  "扫码进来"
+ ],
+ "emojis": [],
+ "extra_pack": [
+  {
+   "use": "TiltLine",
+   "at": "1:到底怎么用",
+   "until": "1:工具选型",
+   "text": "AI 变现 三条线",
+   "keys": [
+    "变现"
+   ],
+   "size": 92,
+   "y": 1000
+  }
+ ]
+}

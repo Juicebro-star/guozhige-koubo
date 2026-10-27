@@ -1,0 +1,73 @@
+{
+ "preset": "标准",
+ "brand": "orange",
+ "badge": "内容由 AI 数字人演绎",
+ "tail": 0.55,
+ "keys": [
+  "到底怎么用",
+  "怎样用 AI 变现",
+  "真实案例",
+  "工具选型",
+  "Agent 搭建",
+  "接单变现",
+  "扫码进来"
+ ],
+ "title": {
+  "left": "果汁哥",
+  "right": "AI & Agent 交流群"
+ },
+ "cards": [
+  {
+   "type": "big",
+   "at": "1:到底怎么用",
+   "text": "AI 到底怎么用"
+  },
+  {
+   "type": "image",
+   "at": "1:每天都有",
+   "src": "show/qr.png",
+   "x": 240,
+   "y": 860,
+   "w": 600,
+   "label": "扫码进群"
+  }
+ ],
+ "pack": [
+  {
+   "use": "KeywordStack",
+   "at": "1:工具选型",
+   "until": "1:每天都有",
+   "x": 90,
+   "y": 700,
+   "items": [
+    {
+     "t": "工具选型",
+     "at": "1:工具选型",
+     "icon": "💻"
+    },
+    {
+     "t": "Agent 搭建",
+     "at": "1:Agent 搭建",
+     "icon": "🤖"
+    },
+    {
+     "t": "接单变现",
+     "at": "1:接单变现",
+     "icon": "💰"
+    }
+   ]
+  },
+  {
+   "use": "CalloutPill",
+   "at": "1:每天都有",
+   "until": "1:end",
+   "text": "扫码进群",
+   "sub": "一起聊 AI & Agent",
+   "x": 540,
+   "y": 770,
+   "color": "#FF7A1A",
+   "pointer": "down"
+  }
+ ],
+ "credits": "Animated emoji: Google Noto"
+}
