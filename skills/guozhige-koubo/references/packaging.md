@@ -1,4 +1,4 @@
-# 包装组件库（48 个，templates/packaging/kit）
+# 包装组件库（48 个，在 templates/huazi-916/src/kit 里）
 
 所有剪辑模板都能用。**写法统一**：一个 `pack` 数组，每条 `{ "use": "组件名", ...参数 }`。
 - 时间字段 `at` / `until`（包括数组里嵌套的，如 `words[].at`、`pins[].at`）可以写 `"段:词"`（如 `"3:积分"`、`"3:"` 段首、`"3:end"` 段尾、`"3:词#2"` 第 2 次出现），也可以写秒数。
@@ -8,7 +8,7 @@
 
 在 9:16 花字模板里写进 `src/edit.json` 的 `"pack"`；在 16:9 参考工程里 `import { PackLayer } from "./kit/registry"`，`<PackLayer items={pack} T={时间解析} />`。
 
-**看效果**：`assets/packaging/图鉴.jpg`（每个组件一格），完整演示片 `templates/packaging` 里 `npx remotion render src/index.ts Gallery`（成片：仓库 Releases 里的 packaging-gallery.mp4）。用户问「有哪些包装」时先发图鉴。
+**看效果**：直接用 `docs/demo.mp4` 看成片里怎么用；组件签名见 `templates/huazi-916/src/kit/registry.tsx` 的 `PACK` 表。`edit.json` 里 `pack` 数组按 `use` 字段调组件，`at`/`until` 用 `"1:关键词"` 格式定时。
 
 ## 开场 / 钩子
 | 组件 | 类型 | 做什么 | 关键参数 | 来源流派 |
