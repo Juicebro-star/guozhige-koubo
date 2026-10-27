@@ -36,6 +36,24 @@
 
 ---
 
+## 现成稿子（不想自己写的看这里）
+
+`templates/` 下四份配置，直接跑：
+
+```bash
+CONFIG=templates/01-工具测评.json bash 2_make.sh ~/h3.mp4
+CONFIG=templates/02-踩坑分享.json bash 2_make.sh ~/h3.mp4
+CONFIG=templates/03-群内答疑.json bash 2_make.sh ~/h3.mp4
+CONFIG=templates/04-单条干货.json bash 2_make.sh ~/h3.mp4
+```
+
+| 文件 | 场景 | 字数 |
+|---|---|---|
+| `01-工具测评.json` | 测评工具、三个场景 | 48 |
+| `02-踩坑分享.json` | 三条踩坑经验 | 47 |
+| `03-群内答疑.json` | 回答高频问题 | 52 |
+| `04-单条干货.json` | 只讲一个点 | 44 |
+
 ## 第 2 步：生成提示词
 
 ```bash

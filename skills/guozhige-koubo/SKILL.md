@@ -5,6 +5,14 @@ description: 白菜价数字人口播——DeepSeek 写稿 + MiniMax H3 出镜 +
 
 # 果汁哥 · 白菜价数字人口播
 
+> 仓库：https://github.com/Juicebro-star/guozhige-koubo ｜ 一条成片约 **1.36 元**
+
+## 用户一句话就够了
+
+> 「帮我把这个仓库跑起来，做一条 15 秒口播，主题是 ___」
+
+你要做的：填 `pipeline/config.json` → 跑 `1_prompt.py` → 让用户去 H3 控制台生成（先报价 1.35 元）→ 跑 `2_make.sh` → 交付 mp4 + 发布文案。
+
 ## 什么时候用
 
 用户要一条**竖版（9:16）数字人口播**：一个"人"对着镜头讲 15 秒，带花字、关键词变色、二维码。
@@ -18,6 +26,21 @@ description: 白菜价数字人口播——DeepSeek 写稿 + MiniMax H3 出镜 +
 5. **发布文案** → 按平台给（抖音/视频号/X 三套逻辑不同）
 
 详细说明见 `pipeline/README.md`。
+
+## 现成稿子模板
+
+`pipeline/templates/` 里四份，改两句就能用：
+
+| 文件 | 场景 |
+|---|---|
+| `01-工具测评.json` | 测评某个工具 |
+| `02-踩坑分享.json` | 讲经验教训 |
+| `03-群内答疑.json` | 回答高频问题 |
+| `04-单条干货.json` | 只讲一个点 |
+
+```bash
+CONFIG=templates/01-工具测评.json bash 2_make.sh ~/h3.mp4
+```
 
 ## 换风格（不重新生成，0 成本）
 

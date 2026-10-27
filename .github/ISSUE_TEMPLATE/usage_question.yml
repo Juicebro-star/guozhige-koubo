@@ -1,0 +1,36 @@
+name: Usage question / 使用问题
+description: Ask for help running the pipeline.
+title: "[Question] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. Security issues must go through .github/SECURITY.md.
+        请先搜索已有 issue。安全漏洞请按 .github/SECURITY.zh_CN.md 私密报告。
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 问题
+      description: What are you trying to do, and where are you blocked?
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS / 系统
+      placeholder: macOS 15.2 / Ubuntu 24.04 / Windows 11
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node version / Node 版本
+      placeholder: For example v22.11.0
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and error / 命令与报错
+      description: Paste the exact command and the full error output.
+      render: shell
+    validations:
+      required: true

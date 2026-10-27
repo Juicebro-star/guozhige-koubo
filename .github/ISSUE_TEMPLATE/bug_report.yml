@@ -1,0 +1,29 @@
+name: Bug report / 缺陷
+description: Something in the pipeline breaks.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include personal photos, group QR codes or credentials.
+        不要包含个人照片、群二维码或凭证。
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened / 发生了什么
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected / 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction / 复现步骤
+      description: Commands run, config.json diff, log output.
+      render: shell
+    validations:
+      required: true

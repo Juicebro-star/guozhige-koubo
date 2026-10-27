@@ -1,150 +1,162 @@
+**English** · [简体中文](README.zh_CN.md)
+
+# Guozhige Koubo · ¥1.36 digital-human talking head
+
 <div align="center">
-
-# 果汁哥 · 白菜价数字人口播
-
-**DeepSeek 写稿 + MiniMax H3 出镜 + Remotion 剪辑**
-
-15 秒竖版 · 1080×1920 · 逐字字幕 · 花字包装 · 二维码
-
-### 一条片子 **1.36 元**
-
-![cost](https://img.shields.io/badge/成本-1.36元%2F条-ff7a1a)
-![h3](https://img.shields.io/badge/出镜-MiniMax%20H3-4b6ef5)
-![deepseek](https://img.shields.io/badge/写稿-DeepSeek-5b8def)
-![remotion](https://img.shields.io/badge/剪辑-Remotion%204-0b84f3)
-![license](https://img.shields.io/badge/license-MIT-black)
-
-<img src="docs/preview/f_2.jpg" width="250" alt="群名胶囊 + 大字"> <img src="docs/preview/f_8.jpg" width="250" alt="三条干货清单"> <img src="docs/preview/f_12.5.jpg" width="250" alt="二维码卡片">
-
-**[▶ 看成片（15 秒，2.2MB）](docs/demo.mp4)**
-
-
+  <img src="docs/assets/juicebro-avatar.jpg" width="88" height="88" alt="Juicebro avatar" />
+  <h2>Cheap digital-human talking head · Maintained by 果汁哥 (Juicebro)</h2>
+  <p>DeepSeek writes it, MiniMax H3 performs it, Remotion packages it. One 15-second vertical clip costs ¥1.36.</p>
 </div>
 
----
+**A finished 15-second vertical talking-head video for about ¥1.36.** The script comes from DeepSeek, the presenter and Mandarin voice from MiniMax H3, and the captions, keyword graphics and QR card render locally in Remotion. No crew, no studio, no digital-human subscription.
 
-## 先算账
+<table><tr>
+<td valign="top" width="68%">
+<strong>Meet Juicebro</strong><br />
+Interested in AI tools, agents or monetization? Say hello.<br /><br />
+<strong>WeChat: </strong><code>guozhige2024</code><br />
+Message me to introduce yourself and ask to join the AI community.<br /><br />
+<a href="https://github.com/Juicebro-star/guozhige-koubo/issues">Report an issue</a> ·
+<a href="https://github.com/Juicebro-star/snoopy-passport">Snoopy Passport</a> ·
+<a href="https://github.com/Juicebro-star/stopwatch-aihot">StopWatch AIHOT</a>
+</td>
+<td align="center" width="32%">
+<a href="docs/assets/juicebro-wechat-qr.png"><img src="docs/assets/juicebro-wechat-qr.png" width="170" alt="Juicebro WeChat QR" /></a><br />
+<sub>Scan to add Juicebro on WeChat</sub>
+</td></tr></table>
 
-| 环节 | 谁在干 | 花多少 |
+## One sentence for your agent
+
+> Point my agent at this repo and make a 15-second talking-head clip about "how to pick AI tools".
+
+Your agent reads [`AGENTS.md`](AGENTS.md), fills in `config.json`, runs two commands and hands back the mp4 plus publishing copy. You never touch the code.
+
+## The math
+
+| Step | Who does it | Cost |
 |---|---|---|
-| 写稿 + 花字编排 + 生成提示词 | **DeepSeek**（agent 直接跑） | ≈ 0.01 元 |
-| 出镜 + 中文配音 + 口型 | **MiniMax H3**（768P / 15 秒 / 9:16） | **1.35 元** |
-| 对齐、花字、二维码、渲染 | Remotion（本地） | **0 元** |
-| **合计** | | **≈ 1.36 元 / 条** |
+| Script, shot list, H3 prompt | **DeepSeek** | ~¥0.01 |
+| Presenter, Mandarin voice, lip-sync | **MiniMax H3** (768P / 15 s / 9:16) | **¥1.35** |
+| Alignment, graphics, QR card, render | Remotion (local) | **¥0** |
+| **Total** | | **≈ ¥1.36 / clip** |
 
-一杯 15 块的奶茶，能出 **11 条**。改稿重排花字不花钱，只有换配音才重新生成。
+Eleven clips for the price of one bubble tea. Re-cutting graphics with the same footage is free — only a new voice take costs money.
 
-> 价格按秘塔控制台的 2 折通道实测（0.09 元/秒）。官方 API 是 0.5 元/秒，一条 7.5 元——**所以别走官方价，走网页控制台**：
-> 👉 [metaso.cn/minimax-h3-console](https://metaso.cn/minimax-h3-console)（选 9:16 / 768P / 15 秒）
+> Measured on the Metaso console's 20%-of-list channel (¥0.09/s). The official API is ¥0.50/s — ¥7.50 a clip. **Don't pay list price**:
+> 👉 [metaso.cn/minimax-h3-console](https://metaso.cn/minimax-h3-console) (9:16 / 768P / 15 s)
 
----
+<table>
+<tr><td align="center"><img src="docs/assets/f_2.jpg" width="230" alt="Opening: title pill + big keyword"></td><td align="center"><img src="docs/assets/f_8.jpg" width="230" alt="Three-point list"></td><td align="center"><img src="docs/assets/f_12.5.jpg" width="230" alt="QR card"></td></tr>
+<tr><td align="center"><sub>Opening</sub></td><td align="center"><sub>Key points</sub></td><td align="center"><sub>QR card</sub></td></tr>
+</table>
 
-## 三条命令
+**[▶ Watch the 15-second demo (2.2 MB)](docs/assets/demo.mp4)**
+
+## Three commands
 
 ```bash
 cd skills/guozhige-koubo/pipeline
 
-# ① 改 config.json：稿子 + 人物 + 花字（一个文件搞定）
-python3 1_prompt.py                 # ② 出 H3 提示词，去控制台生成
-bash 2_make.sh ~/Desktop/h3.mp4     # ③ 出片，2 分钟
+# 1. edit config.json — script, presenter, graphics (one file)
+python3 1_prompt.py                 # 2. prints the H3 prompt; generate in the console
+bash 2_make.sh ~/Desktop/h3.mp4     # 3. render (~2 min)
 ```
 
-成片在 `pipeline/out/`，直接传抖音、视频号。
+Output lands in `pipeline/out/`.
 
----
+## Why it is this cheap
 
-## 为什么能打到这个价
+1. No crew, no studio, no subscription — one pay-per-second generation endpoint.
+2. **Stay under 15 seconds.** H3 bills double from 16 s. Script budget: 60–67 spoken characters (≈4.5 ch/s).
+3. All cutting happens locally in Remotion — unlimited re-renders at zero cost.
+4. No Whisper: word timings are recovered from silence gaps plus punctuation, no model download.
+5. One take, many styles — swap a variant JSON instead of regenerating.
 
-1. **不用请人、不用场地、不用订阅数字人平台**——只有一个按秒计费的生成接口；
-2. **卡在 15 秒以内**。H3 从 16 秒起按 2 倍计费，稿子控制在 60–67 字（4.5 字/秒）；
-3. **剪辑全在本地**。Remotion 渲染，不吃积分；
-4. **对齐不用 whisper**。用「静音间隙 + 标点断句」反推每个字的时间，零模型、零下载；
-5. **一条素材出 N 种风格**。换 `variants/*.json` 就是换花字，不重新生成。
+## Script templates
 
----
+Four ready scripts in `pipeline/templates/`:
 
-## 能出什么效果
-
-- 逐字字幕，关键词自动变色放大
-- 干货清单逐条弹出 / 橙色大字 / 盖章 / 数据条 / 左右对比（9 种卡片）
-- 49 个包装组件：倾斜金句、弹幕、画中画、数字滚动、文字压人物背后……
-- 二维码入群卡 + 指向胶囊 + 卡点音效
-- 花字强度三档：克制（真人分享）/ 标准 / 热闹
-
-花字不是代码硬编码的，是一份 `edit.json`，全部由 `config.json` 生成。
-
----
-
-## 换人物 / 换风格
-
-**换人物**——改两行：
-
-```json
-"avatar": "../assets/新人物.jpg",
-"look":   "年轻男性，短发，深色卫衣，室内自然光"
-```
-
-参考图要求：**9:16 竖图、正脸、闭嘴、头发不挡脸**。
-
-**换风格**——换个配置文件（0 成本，2 分钟）：
+| Template | Use for |
+|---|---|
+| `01-工具测评.json` | reviewing a tool |
+| `02-踩坑分享.json` | lessons learned |
+| `03-群内答疑.json` | answering a common question |
+| `04-单条干货.json` | one single tip |
 
 ```bash
-CONFIG=variants/A.json bash 2_make.sh ~/h3.mp4   # 克制真人风
-CONFIG=variants/B.json bash 2_make.sh ~/h3.mp4   # 清单干货风
+CONFIG=templates/01-工具测评.json bash 2_make.sh ~/h3.mp4
 ```
 
----
+## Swap the presenter or the style
 
-## 目录
+```json
+"avatar": "../assets/your-photo.jpg",
+"look":   "young male, short hair, dark hoodie, indoor daylight"
+```
+
+Reference photo: 9:16, front-facing, mouth closed, hair off the face.
+
+```bash
+CONFIG=variants/A.json bash 2_make.sh ~/h3.mp4   # restrained, creator-style
+CONFIG=variants/B.json bash 2_make.sh ~/h3.mp4   # checklist, information-heavy
+```
+
+## What you get
+
+- Word-by-word captions with keyword highlighting
+- Nine card types (checklist, big keyword, stamp, bars, side-by-side…) and 48 packaging components
+- QR join card with a pointer pill and beat-synced SFX
+- Three graphic intensities: restrained / standard / loud
+
+Graphics are not hard-coded — they are a generated `edit.json`.
+
+## Layout
 
 ```
-docs/                      示例：15 秒成片 + 三张关键帧
 skills/guozhige-koubo/
-├── SKILL.md               Agent 操作手册（Claude Code / Codex 可直接用）
-├── persona.json           人物设定
-├── pipeline/              ★ 流水线，改 config.json 就够了
-│   ├── config.json        稿子 / 人物 / 花字 / 二维码位置
-│   ├── 1_prompt.py        H3 提示词生成
-│   ├── 2_make.sh          一键出片
-│   ├── align_lite.py      免 whisper 的逐字对齐
-│   ├── gen_edit.py        config → edit.json
-│   ├── variants/          现成风格配置
-│   └── assets/            二维码（黑版）+ 音效
-├── templates/huazi-916/   9:16 渲染工程（Remotion）
-├── references/            花字组件、包装、安装、换人物
-└── assets/                avatar_ref.jpg（示例参考图）
+├── SKILL.md              agent operating manual
+├── persona.json          presenter definition
+├── pipeline/             ★ the pipeline; config.json is the only file you edit
+│   ├── config.json       script / presenter / graphics / QR placement
+│   ├── 1_prompt.py       H3 prompt generator
+│   ├── 2_make.sh         one-command render
+│   ├── align_lite.py     Whisper-free word alignment
+│   ├── gen_edit.py       config → edit.json
+│   ├── templates/        four ready scripts
+│   ├── variants/         two ready styles
+│   └── assets/           black QR + SFX
+├── templates/huazi-916/  Remotion project (9:16)
+├── references/           components, packaging, setup, avatar, publishing
+├── scripts/              helper scripts
+└── assets/               avatar_ref.jpg (example reference)
 ```
 
-> 示例成片在 `docs/demo.mp4`，示例参考图在 `assets/avatar_ref.jpg`。换成你自己的人，改 `config.json` 的 `avatar` + `look` 两行。
+## Requirements
 
-## 环境
+Node ≥ 20, ffmpeg, Python 3, Google Chrome. macOS: `brew install node ffmpeg`.
 
-Node ≥ 20、ffmpeg、Python 3、Google Chrome。macOS：`brew install node ffmpeg`。
+The first `2_make.sh` installs render dependencies (~1 min); each later clip takes ~2 min.
 
-首次 `2_make.sh` 会自己装渲染依赖（约 1 分钟），之后每条 2 分钟。
+## Traps we already hit
 
----
-
-## 我们踩过的坑（直接抄结论）
-
-| 坑 | 结论 |
+| Trap | Fix |
 |---|---|
-| 橙色二维码扫不出 | 视频压缩后对比度不够，**换成纯黑**（`assets/qr.png` 已转） |
-| 时长过 15 秒被按 2 倍计费 | 稿子 60–67 字，别贪 |
-| H3 偶尔烧字幕 | 生成后抽 4 帧验，有就重生成 |
-| 稿子写成「不是 A，是 B」 | 一眼 AI 味，删掉重写 |
-| 视频号不标 AI 被限流 | 勾「内容由 AI 生成」+ 画面角标双保险 |
-| 竖版发 X 被裁 | 出 1:1 适配版，中间放视频两侧模糊 |
+| Orange QR code unscannable | Video compression kills the contrast — use solid black (`assets/qr.png`) |
+| 16 s bills double | Keep the script at 60–67 characters |
+| H3 occasionally burns subtitles in | Extract 4 frames after generation; regenerate if present |
+| "It's not A, it's B" openers | Reads as AI slop — rewrite |
+| WeChat Channels suppression | Tick the AI-generated declaration, plus an on-screen label |
+| Vertical video cropped on X | Render a 1:1 version with blurred side fill |
 
----
+## License
 
-## 许可与致谢
+MIT (see [`LICENSE`](LICENSE)). The example presenter is for demonstration only — do not reuse the likeness.
 
-MIT（见 `LICENSE`）。示例里的人物形象仅作演示，别拿去当自己的人设。
+A low-cost fork of the [digital-human-koubo](https://github.com/) approach: the generator moved to MiniMax H3, alignment became dependency-free, and swapping presenters collapsed to one image plus one sentence.
 
-- [MiniMax H3](https://platform.minimaxi.com/) — 出镜与配音
-- [DeepSeek](https://www.deepseek.com/) — 写稿与编排
-- [Remotion](https://www.remotion.dev/) — 本地渲染
-- [Google Noto Emoji](https://googlefonts.github.io/noto-emoji-animation/) — 动态表情（CC BY 4.0，片尾已署名）
+- [MiniMax H3](https://platform.minimaxi.com/) — presenter and voice
+- [DeepSeek](https://www.deepseek.com/) — scripting and packaging
+- [Remotion](https://www.remotion.dev/) — local rendering
+- [Google Noto Emoji](https://googlefonts.github.io/noto-emoji-animation/) — animated emoji (CC BY 4.0)
 
-第三方组件明细见 `THIRD_PARTY.md`。
+See [`THIRD_PARTY.md`](THIRD_PARTY.md).
