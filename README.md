@@ -84,6 +84,7 @@ Four ready scripts in `pipeline/templates/`:
 | `02-踩坑分享.json` | lessons learned |
 | `03-群内答疑.json` | answering a common question |
 | `04-单条干货.json` | one single tip |
+| `05-产品介绍.json` | product pitch, four-sentence template |
 
 ```bash
 CONFIG=templates/01-工具测评.json bash 2_make.sh ~/h3.mp4
